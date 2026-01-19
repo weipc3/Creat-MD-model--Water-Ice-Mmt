@@ -1,0 +1,35 @@
+# TIP4P/2005 water system
+
+variable 		temp index 300.0
+variable 		filename1 index nve
+
+units 			real
+atom_style 		full
+boundary 		p p p
+
+pair_style 		lj/cut/tip4p/long 1 2 1 1 0.1546 10.5 8.0       #如果是其他类型水分子，需要修改   pair_style lj/cut/coul/long  10  8.5
+pair_modify 	mix arithmetic tail yes
+kspace_style 	pppm/tip4p 1.0e-6         #其他水分子      kspace_style ewald  1.0e-6  根据需要来修改
+bond_style 		harmonic
+angle_style 	harmonic
+
+read_data 		tip4p-2005.data
+replicate 		20 10 10 #复制扩胞为20a*10b*10c = 62*31*31，6000 atoms，2000个水分子
+
+pair_coeff 		1 1 0.1852 3.1589       #其他水分子  pair、bond、angle、mass也要修改
+pair_coeff 		* 2 0 0
+
+bond_coeff 		1 	0 	0.9572 # o*-h*
+angle_coeff 	1 	0 	104.5200 # h*-o*-h*
+
+mass 1 15.9994
+mass 2 1.008
+
+set 			type 1 charge -1.1128   #TIP4P/2005 的水模型，data文件中也要相应修改 pair、bond、angle系数
+set 			type 2 charge 0.5564
+
+
+neighbor 		1.0 bin
+neigh_modify 	delay 0 every 1 check yes
+
+write_data 		waterbox.data #输出
