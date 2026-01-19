@@ -1,0 +1,78 @@
+LAMMPS (7 Aug 2019)
+Reading data file ...
+  orthogonal box = (-0.0103164 -0.593982 -1.32419) to (20.7097 8.38602 8.27581)
+  5 by 1 by 2 MPI processor grid
+  reading atoms ...
+  163 atoms
+  scanning bonds ...
+  1 = max bonds/atom
+  reading bonds ...
+  16 bonds
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:   0          0          0         
+  special bond factors coul: 0          0          0         
+  1 = max # of 1-2 neighbors
+  0 = max # of 1-3 neighbors
+  0 = max # of 1-4 neighbors
+  1 = max # of special neighbors
+  special bonds CPU = 0.00125146 secs
+  read_data CPU = 0.0080421 secs
+Setting atom values ...
+  14 settings made for charge
+Setting atom values ...
+  2 settings made for charge
+Setting atom values ...
+  31 settings made for charge
+Setting atom values ...
+  68 settings made for charge
+Setting atom values ...
+  12 settings made for charge
+Setting atom values ...
+  8 settings made for charge
+Setting atom values ...
+  4 settings made for charge
+Setting atom values ...
+  16 settings made for charge
+Setting atom values ...
+  4 settings made for charge
+Setting atom values ...
+  1 settings made for charge
+Setting atom values ...
+  3 settings made for charge
+Replicating atoms ...
+  orthogonal box = (-0.0103164 -0.593982 -1.32419) to (20.7097 17.366 8.27581)
+  5 by 2 by 1 MPI processor grid
+  326 atoms
+  32 bonds
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:   0          0          0         
+  special bond factors coul: 0          0          0         
+  1 = max # of 1-2 neighbors
+  0 = max # of 1-3 neighbors
+  0 = max # of 1-4 neighbors
+  1 = max # of special neighbors
+  special bonds CPU = 0.000239849 secs
+  replicate CPU = 0.000811815 secs
+System init for write_data ...
+PPPM initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:323)
+  G vector (1/distance) = 0.347812
+  grid = 18 15 10
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0277599
+  estimated relative force accuracy = 8.35981e-05
+  using double precision FFTW3
+  3d grid and FFT values/proc = 2210 320
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 5.5, bins = 4 4 2
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Total wall time: 0:00:00

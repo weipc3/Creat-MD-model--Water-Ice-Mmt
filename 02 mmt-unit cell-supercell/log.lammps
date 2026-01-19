@@ -1,0 +1,5 @@
+LAMMPS (7 Aug 2019)
+variable 		filename1 index supercell-421-mmt #定义文件名
+
+log 			${filename1}.log
+log 			supercell-421-mmt.log
